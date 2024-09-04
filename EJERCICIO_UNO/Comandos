@@ -1,0 +1,6 @@
+rpcgen -N calcular.x 
+gcc -c calcular_svc.c && gcc -c calcular_xdr.c && gcc -c cliente.c && gcc -c servidor.c && gcc -c calcular_clnt.c 
+
+gcc -o calcular.o calcular_clnt.o calcular_xdr.o cliente.o -o cliente
+gcc -o calcular.o calcular_svc.o calcular_xdr.o servidor.o -o servidor
+
